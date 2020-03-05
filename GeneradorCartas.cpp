@@ -7,6 +7,8 @@ class Cola;
 GeneradorCartas::GeneradorCartas(Cola colaIzquierda, ListaDoblementeEnlazada L1,ListaDoblementeEnlazada L2,  ListaDoblementeEnlazada L3,
     ListaDoblementeEnlazada L4, ListaDoblementeEnlazada L5, ListaDoblementeEnlazada L6, ListaDoblementeEnlazada L7, ListaDoblementeEnlazada L8,  ListaDoblementeEnlazada L9 ){
     barajarCartas();
+    LlenarColas(colaIzquierda);
+    LlenarListas(L1, L2, L3, L4, L5, L6, L7);
 }
 
 GeneradorCartas::GeneradorCartas(){

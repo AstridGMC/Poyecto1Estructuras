@@ -1,7 +1,8 @@
+
 #include "Menu.hpp"
 #include <iostream>
 using namespace std;
- 
+
 Menu::Menu() {
 }
 
@@ -21,6 +22,8 @@ void Menu::MenuPrincipal(){
     switch(opcion){
         default:// Iniciar Juego 
             cout << "   Has elegido Iniciar un nuevo juego\n";
+            Tablero tab =  Tablero();
+            //tab.imprimirCartasInicio();
             MenuJugador();
             break;
         

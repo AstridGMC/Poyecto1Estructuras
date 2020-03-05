@@ -11,8 +11,9 @@ class Tablero{
     public:
         Tablero();
         void inicioJuego();
+        void imprimirCartasInicio();
     private:
-    void imprimirCartasInicio();
+    
     Cola colaIzquierda =  Cola();
     Cola colaDerecha = Cola();
     ListaDoblementeEnlazada L1 = ListaDoblementeEnlazada();

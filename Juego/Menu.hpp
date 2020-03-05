@@ -1,6 +1,8 @@
 #ifndef MENU_HPP
 #define MENU_HPP
+#include "../Tablero.h"
 
+class Tablero;
 class Menu {
     public:
         Menu();
