@@ -93,37 +93,61 @@ Carta Carta:: GenerarCartaDiamante(Carta baraja[13]){
     }
     baraja[13]= cartaAs;
 }
+Nodo *aux1;
+Nodo *aux2;
+Nodo *aux3;
+Nodo *aux4;
+Nodo *aux5;
+Nodo *aux6;
+Carta carta;
 void Carta :: ImprmirCarta(Cola colaIzquerda, Cola colaDerecha, ListaDoblementeEnlazada L1, ListaDoblementeEnlazada L2, ListaDoblementeEnlazada L3,
                         ListaDoblementeEnlazada L4, ListaDoblementeEnlazada L5, ListaDoblementeEnlazada L6, ListaDoblementeEnlazada L7){
     Nodo *nodo = new Nodo();
     for (int i = 0; i < 15; i++) {
+        if(i=0){        
+             carta = colaIzquerda.obtenerPrimero();
+            if(!colaDerecha.colaVacia(nodo)){
+                carta = colaIzquerda.obtenerPrimero();
+            }
+            aux1= L2.ObtenerPrimerNodo();
+            aux2 =L3.ObtenerPrimerNodo();
+            aux3=L4.ObtenerPrimerNodo();
+            aux4 = L5.ObtenerPrimerNodo();
+            aux5= L6.ObtenerPrimerNodo();
+            aux6= L7.ObtenerPrimerNodo();
+        }else{
+            aux1= L2.ObtenerSiguiente(aux1);
+            aux2 =L3.ObtenerSiguiente(aux2);
+            aux3=L4.ObtenerSiguiente(aux3);
+            aux4 = L5.ObtenerSiguiente(aux4);
+            aux5= L6.ObtenerSiguiente(aux5);
+            aux6= L7.ObtenerSiguiente(aux6);
+        }
         for (int j = 0; j < 13; j++) {
             cout << "---------  ";
         }
         cout << "\n";
         for (int j = 0; j < 13; j++) {
             if(j==0){
-                Carta carta = colaIzquerda.obtenerPrimero();
                 cout << "|" << carta.getIdentificador() << "      |  ";
             }else if(j==1){
                 if(colaDerecha.colaVacia(nodo)){
                     cout << "|" << " " << "      |  ";
                 }else{
-                    Carta carta = colaIzquerda.obtenerPrimero();
                     cout << "|" << carta.valor << "      |  ";
                 }
             }else if(j=2){
-                L2.ObtenerFrente().ImprimirValores(1);
+                aux1->dato.ImprimirValores(1);
             }else if(j=3){
-                L3.ObtenerFrente().ImprimirValores(1);
+                 aux2->dato.ImprimirValores(1);
             }else if(j=4){
-                L4.ObtenerFrente().ImprimirValores(1);
+                 aux3->dato.ImprimirValores(1);
             }else if(j=5){
                 L5.ObtenerFrente().ImprimirValores(1);
             }else if(j=6){
-                L6.ObtenerFrente().ImprimirValores(1);
+                 aux5->dato.ImprimirValores(1);
             }else if(j=7){
-                L7.ObtenerFrente().ImprimirValores(1);
+                aux6->dato.ImprimirValores(1);
             }else{
                 cout << "|" << " " << "      |  ";
             }
@@ -141,17 +165,17 @@ void Carta :: ImprmirCarta(Cola colaIzquerda, Cola colaDerecha, ListaDoblementeE
                     cout << "|" << carta.identificador << "    |  ";
                 }
             }else if(k=2){
-                L2.ObtenerFrente().ImprimirValores(2);
+                aux1->dato.ImprimirValores(1);
             }else if(k=3){
-                L3.ObtenerFrente().ImprimirValores(2);
+               aux2->dato.ImprimirValores(2);
             }else if(k=4){
-                L4.ObtenerFrente().ImprimirValores(2);
+                aux3->dato.ImprimirValores(2);
             }else if(k=5){
-                L5.ObtenerFrente().ImprimirValores(2);
+                aux4->dato.ImprimirValores(2);
             }else if(k=6){
-                L6.ObtenerFrente().ImprimirValores(2);
+                aux5->dato.ImprimirValores(2);
             }else if(k=7){
-                L7.ObtenerFrente().ImprimirValores(2);
+                aux6->dato.ImprimirValores(2);
             }else{
                 cout << "|" << " " << "      |  ";
             }
@@ -168,17 +192,17 @@ void Carta :: ImprmirCarta(Cola colaIzquerda, Cola colaDerecha, ListaDoblementeE
                     cout << "|" << carta.identificador << "    |  ";
                 }
             }else if(l=2){
-                L2.ObtenerFrente().ImprimirValores(2);
+                aux1->dato.ImprimirValores(1);
             }else if(l=3){
-                L3.ObtenerFrente().ImprimirValores(2);
+                aux2->dato.ImprimirValores(1);
             }else if(l=4){
-                L4.ObtenerFrente().ImprimirValores(2);
+                aux3->dato.ImprimirValores(1);
             }else if(l=5){
-                L5.ObtenerFrente().ImprimirValores(2);
+                aux4->dato.ImprimirValores(1);
             }else if(l=6){
-                L6.ObtenerFrente().ImprimirValores(2);
+                aux5->dato.ImprimirValores(1);
             }else if(l=7){
-                L7.ObtenerFrente().ImprimirValores(2);
+               aux6->dato.ImprimirValores(1);
             }else{
                 cout << "|" << " " << "      |  ";
             }

@@ -5,10 +5,10 @@ class Menu {
     public:
         Menu();
         Menu(const Menu& orig);
-        void MenuPrincipal(int);
-        void MenuJugador(int);
-        void MenuMoverNumeroCarta(char[]);
-        void MenuMoverCarta( int);
+        void MenuPrincipal();
+        void MenuJugador();
+        void MenuMoverNumeroCarta(char*);
+        void MenuMoverCarta();
         virtual ~Menu();
     private:
 

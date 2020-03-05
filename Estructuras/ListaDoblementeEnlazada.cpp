@@ -16,9 +16,12 @@ ListaDoblementeEnlazada::ListaDoblementeEnlazada()
     
 }
 
+Nodo* ListaDoblementeEnlazada:: ObtenerPrimerNodo(){
+    return header->siguiente;
+}
 
-Carta ListaDoblementeEnlazada:: ObtenerSiguiente(Nodo *nodo){
-    return nodo->siguiente->dato;
+Nodo* ListaDoblementeEnlazada:: ObtenerSiguiente(Nodo *nodo){
+    return nodo->siguiente;
 }
 
 Carta ListaDoblementeEnlazada::ObtenerFrente()

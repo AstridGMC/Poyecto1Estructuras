@@ -5,8 +5,8 @@ class Menu;
 
 int main(){
     Menu menu = Menu();
-    menu.MenuPrincipal(6);
-    cout<<"hjhjhjhjh";
+    menu.MenuPrincipal();
+    
     cin.ignore();
     cin.get();
     return 0;

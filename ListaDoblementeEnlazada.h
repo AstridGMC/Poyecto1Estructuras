@@ -10,10 +10,11 @@ class ListaDoblementeEnlazada
 {
 public:
     Nodo* obtenerHeader();
+    Nodo* ObtenerPrimerNodo();
     ListaDoblementeEnlazada();
     ListaDoblementeEnlazada(const ListaDoblementeEnlazada& orig);
     virtual ~ListaDoblementeEnlazada();
-    Carta ObtenerSiguiente(Nodo *nodo);
+    Nodo* ObtenerSiguiente(Nodo *nodo);
     Carta ObtenerFrente() ;
     Carta ObtenerUltimo();
     void InsertarNodoFrente(Carta carta);
