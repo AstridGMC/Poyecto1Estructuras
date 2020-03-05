@@ -1,8 +1,8 @@
-#include "Nodo.h"
-#include "../Carta.hpp"
+#include "../Nodo.h"
 #include "iostream"
 using namespace std;
-#include "ListaDoblementeEnlazada.h"
+#include "../ListaDoblementeEnlazada.h"
+
 
 ListaDoblementeEnlazada::ListaDoblementeEnlazada()
 {
@@ -17,24 +17,24 @@ ListaDoblementeEnlazada::ListaDoblementeEnlazada()
 }
 
 
-Carta* ListaDoblementeEnlazada:: ObtenerSiguiente(Nodo *nodo){
+Carta ListaDoblementeEnlazada:: ObtenerSiguiente(Nodo *nodo){
     return nodo->siguiente->dato;
 }
 
-Carta* ListaDoblementeEnlazada::ObtenerFrente()
+Carta ListaDoblementeEnlazada::ObtenerFrente()
 {
     //aux = header->siguiente;
     return header->siguiente->dato;
 }
 
-Carta* ListaDoblementeEnlazada:: ObtenerUltimo()
+Carta ListaDoblementeEnlazada:: ObtenerUltimo()
 {
     return trailer->siguiente->dato; 
 }
 
-void ListaDoblementeEnlazada::InsertarNodoFrente( Carta *dt)
+void ListaDoblementeEnlazada::InsertarNodoFrente( Carta dt)
 {
-    Carta *carta = dt;
+    Carta carta = dt;
     Nodo *nd = new Nodo;
     nd->dato = dt;
     nd->anterior = header;
@@ -44,7 +44,7 @@ void ListaDoblementeEnlazada::InsertarNodoFrente( Carta *dt)
     header ->siguiente = nd;
     
 }
-void ListaDoblementeEnlazada::InsertarAtras(Carta *dt)
+void ListaDoblementeEnlazada::InsertarAtras(Carta dt)
 {
     Nodo *nd = new Nodo;
     nd-> dato = dt;
@@ -78,35 +78,35 @@ void ListaDoblementeEnlazada::imprimirAlReverso()
 {
 
 }
-
+/*
 
 Nodo *aux2;
 int i =0;
 // tipo dato : 1= valor, 2= identificador
-void ListaDoblementeEnlazada::ImprimirValores(int tipoDato, Carta* carta )
+void ListaDoblementeEnlazada::ImprimirValores(int tipoDato, Carta carta )
 {
     if(tipoDato = 1){
         //Carta aux = ObtenerSiguiente(siguiente);
-            if(carta->isVolteada){
-                cout << "|" << carta->getValor << "    |  ";
+            if(carta.isVolteada()){
+                cout << "|" << carta.getValor() << "    |  ";
             }else
             {
                 cout << "|" << "xxx" << "    |  ";
             }
         }else if(tipoDato = 2){
                
-            if(carta->isVolteada){
-                cout << "|" << carta->getIdentificador << "    |  ";
+            if(carta.isVolteada()){
+                cout << "|" << carta.getIdentificador() << "    |  ";
             }else
             {
                 cout << "|" << "xxx" << "    |  ";
             }
-            cout << "|" << carta->getIdentificador << "    |  ";
+            cout << "|" << carta.getIdentificador() << "    |  ";
         }else{
             cout << " " << " " << "       ";
         }
 }
-
+*/
 ListaDoblementeEnlazada::ListaDoblementeEnlazada(const ListaDoblementeEnlazada& orig)
 {
 }
@@ -122,7 +122,7 @@ bool ListaDoblementeEnlazada:: estaVacia(){
 ListaDoblementeEnlazada::~ListaDoblementeEnlazada()
 {
     while(header-> siguiente != trailer){
-        removerPrimero;
+        removerPrimero();
     }
     delete header;
     delete trailer;

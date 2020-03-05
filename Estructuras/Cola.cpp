@@ -1,9 +1,16 @@
 #include "../Cola.h"
 #include "../Nodo.h"
 #include "../Carta.hpp"
+class Nodo;
+class cola;
 Cola::  Cola(){
 
 }
+
+bool Cola:: colaVacia(Nodo *frente){
+    return (frente == nullptr)? true : false;
+} 
+
 void Cola::insertarCola(Nodo *&frente, Nodo *&final,Carta dt){
     Nodo *nuevoNodo = new Nodo();
     nuevoNodo -> dato = dt;
@@ -15,7 +22,7 @@ void Cola::insertarCola(Nodo *&frente, Nodo *&final,Carta dt){
     }
 }
 
-Carta* Cola :: obtenerPrimero(){
+Carta Cola :: obtenerPrimero(){
     return frente->dato;
 }
 
@@ -31,9 +38,7 @@ void Cola::sacarElementoCola(Nodo *&, Nodo *&, Carta dt){
     delete auxiliar;
 }
 
-bool colaVacia(Nodo *frente){
-    return (frente == nullptr)? true : false;
-}
+
 
 
 Cola::~Cola()

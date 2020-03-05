@@ -1,4 +1,5 @@
-#include "Carta.h"
+#include "Carta.hpp"
+class Carta;
 class GeneradorCartas{
     public:
         GeneradorCartas(Cola, ListaDoblementeEnlazada, ListaDoblementeEnlazada,ListaDoblementeEnlazada, ListaDoblementeEnlazada,ListaDoblementeEnlazada, ListaDoblementeEnlazada,ListaDoblementeEnlazada, ListaDoblementeEnlazada, ListaDoblementeEnlazada);

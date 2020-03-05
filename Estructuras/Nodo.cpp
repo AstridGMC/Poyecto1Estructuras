@@ -1,5 +1,6 @@
-#include "Nodo.h"
-
+#include "../Nodo.h"
+#include "../Carta.hpp"
+class Carta;
 
 Nodo::Nodo()
 {
@@ -9,9 +10,6 @@ Nodo::Nodo()
 Nodo::Nodo(const Nodo& orig)
 {
 }
-
-Carta dato = Carta();
-
 /*
 void Nodo::setSiguiente(Nodo s)
 {
@@ -23,17 +21,7 @@ void Nodo:: setAnterior(Nodo a)
     anterior = a;
 }
 */
-
-Nodo Nodo::  getSiguiente()
-{
-    return *siguiente;
-}
-
-Nodo Nodo :: getAnterior()
-{
-    return *anterior;
-}
-
+Carta Nodo :: dato;
 Nodo::~Nodo()
 {
 }

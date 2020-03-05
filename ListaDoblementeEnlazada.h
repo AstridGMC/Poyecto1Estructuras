@@ -1,5 +1,10 @@
+#ifndef LISTADOBLEMENTEENLAZADA_H
+#define LISTADOBLEMENTEENLAZADA_H
+
 #include "Nodo.h"
 #include "Carta.hpp"
+class Nodo;
+class Carta;
 
 class ListaDoblementeEnlazada
 {
@@ -8,11 +13,11 @@ public:
     ListaDoblementeEnlazada();
     ListaDoblementeEnlazada(const ListaDoblementeEnlazada& orig);
     virtual ~ListaDoblementeEnlazada();
-    Carta* ObtenerSiguiente(Nodo *nodo);
-    Carta* ObtenerFrente() ;
-    Carta* ObtenerUltimo();
-    void InsertarNodoFrente(Carta *carta);
-    void InsertarAtras(Carta *carta);
+    Carta ObtenerSiguiente(Nodo *nodo);
+    Carta ObtenerFrente() ;
+    Carta ObtenerUltimo();
+    void InsertarNodoFrente(Carta carta);
+    void InsertarAtras(Carta carta);
     void removerPrimero();
     void removerUltimo();
     void imprimirAlReverso();
@@ -22,3 +27,5 @@ private:
     Nodo *header;
     Nodo *trailer;
 };
+
+#endif

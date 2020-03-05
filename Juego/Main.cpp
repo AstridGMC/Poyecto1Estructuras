@@ -1,6 +1,8 @@
 #include "iostream"
 using namespace std;
 #include "Menu.hpp"
+class Menu;
+
 int main(){
     Menu menu = Menu();
     menu.MenuPrincipal(6);

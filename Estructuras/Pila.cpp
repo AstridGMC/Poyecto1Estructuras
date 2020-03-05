@@ -1,5 +1,8 @@
 
-#include "Nodo.h"
+#include "../Nodo.h"
+#include "../Carta.hpp"
+class Nodo;
+class Carta;
 
 class Pila {
 public:

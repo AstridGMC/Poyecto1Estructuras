@@ -1,8 +1,8 @@
 #include "Tablero.h"
-#include "Estructuras/Cola.h"
-#include "Estructuras/ListaDoblementeEnlazada.h"
-#include "Carta.h"
 #include "GeneradorCartas.h"
+class Carta;
+class GeneradorCartas;
+
 
 Tablero :: Tablero(){
 

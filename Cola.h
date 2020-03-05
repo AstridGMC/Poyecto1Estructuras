@@ -8,7 +8,7 @@ class Cola {
         void insertarCola(Nodo *&, Nodo *&, Carta dato);
         bool colaVacia(Nodo *);
         void sacarElementoCola(Nodo *&, Nodo *&, Carta dato);
-        Carta* obtenerPrimero();
+        Carta obtenerPrimero();
         ~Cola();
     private:
         Nodo *frente;

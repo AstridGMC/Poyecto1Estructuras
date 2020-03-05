@@ -1,10 +1,15 @@
 #ifndef TABLERO
 #define TABLERO
-#include "Estructuras/Cola.h"
-#include "Estructuras/ListaDoblementeEnlazada.h"
-#include "Carta.h"
+#include "Cola.h"
+#include "ListaDoblementeEnlazada.h"
+#include "Carta.hpp"
+class Carta;
+class Cola;
+class ListaDoblementeEnlazada;
+
 class Tablero{
     public:
+        Tablero();
         void inicioJuego();
     private:
     void imprimirCartasInicio();

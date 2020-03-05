@@ -1,7 +1,8 @@
-#include "Estructuras/Cola.h"
-#include "Estructuras/ListaDoblementeEnlazada.h"
-#include "Carta.h"
+#include "Cola.h"
+#include "ListaDoblementeEnlazada.h"
 #include "GeneradorCartas.h"
+class ListaDoblementeEnlazada;
+class Cola;
 
 GeneradorCartas::GeneradorCartas(Cola colaIzquierda, ListaDoblementeEnlazada L1,ListaDoblementeEnlazada L2,  ListaDoblementeEnlazada L3,
     ListaDoblementeEnlazada L4, ListaDoblementeEnlazada L5, ListaDoblementeEnlazada L6, ListaDoblementeEnlazada L7, ListaDoblementeEnlazada L8,  ListaDoblementeEnlazada L9 ){
@@ -126,4 +127,6 @@ void GeneradorCartas :: barajarCartas(){
 int GeneradorCartas :: generarAleatorio(){
     return (0 + rand() / (RAND_MAX / (52 - 0 + 1) + 1));
 }
+
+
 
